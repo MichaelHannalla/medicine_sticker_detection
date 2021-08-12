@@ -7,11 +7,10 @@ from detecto.core import Dataset, Model
 
 def main():
 
-    #TODO: using the argparser
     train_dataset = Dataset('data/train')
     model = Model(['medicament', 'vignette'])
-    val_dataset = Dataset('data/test')
-    losses = model.fit(train_dataset, val_dataset, epochs=100, learning_rate=0.01,
+    val_dataset = Dataset('data/eval')
+    losses = model.fit(train_dataset, val_dataset, epochs=10, learning_rate=0.01,
                    gamma=0.2, lr_step_size=5, verbose=True)
 
     

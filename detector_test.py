@@ -16,17 +16,25 @@ def main():
     path = "data/eval"
     image_files = os.listdir(path)
     images = []
-    print(image_files)
+    start_idx = 14
+    end_idx = 17
+    
     for idx, image_file in enumerate(image_files):
+        
+        if idx < start_idx:
+            continue
+
         full_path = path + "/{}".format(image_file)
         if full_path.endswith(".jpg"):
             test_image = read_image(full_path)
             images.append(test_image)
-        if idx == 20:
+
+        
+        if idx == end_idx:
             break
     
     # labels, boxes, scores = model.predict(test_image)
-
+    
     plot_prediction_grid(model, images, dim=None, figsize=None, score_filter=0.6)
     
 if __name__ == "__main__":

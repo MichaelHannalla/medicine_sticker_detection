@@ -10,11 +10,11 @@ def main():
     train_dataset = Dataset('data/train')
     model = Model(['medicament', 'vignette'])
     val_dataset = Dataset('data/eval')
-    losses = model.fit(train_dataset, val_dataset, epochs=10, learning_rate=0.01,
+    losses = model.fit(train_dataset, val_dataset, epochs=40, learning_rate=0.015,
                    gamma=0.2, lr_step_size=5, verbose=True)
 
     
-    model.save('models/detector_weights.pth')
+    model.save('models/detector_weights_v2.pth')
 
 if __name__ == "__main__":
     main()

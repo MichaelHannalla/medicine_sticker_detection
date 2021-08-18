@@ -7,7 +7,6 @@
 from detecto.core import Model
 from detecto.utils import read_image
 from detecto.visualize import plot_prediction_grid
-import os
 import argparse
 
 def main():

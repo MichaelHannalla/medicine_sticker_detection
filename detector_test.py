@@ -1,8 +1,8 @@
   
 # File: strip_detector_test.py
 # Author: @MichaelHannalla
-# Project: Trurapid COVID-19 Strips Detection Server with Python
-# Description: Python file for testing the strip detector based on detecto on a single input image
+# Project: Medicine Packages Sticker Detection
+# Description: Python file for testing the detector based on detecto on multiple image samples
 
 from detecto.core import Model
 from detecto.utils import read_image
@@ -11,13 +11,13 @@ import os
 
 def main():
 
-    model = Model.load('models/detector_weights.pth', ['medicament', 'vignette'])
+    model = Model.load('models/detector_weights_v2.pth', ['medicament', 'vignette'])
     
     path = "data/eval"
     image_files = os.listdir(path)
     images = []
-    start_idx = 14
-    end_idx = 17
+    start_idx = 90
+    end_idx = 94
     
     for idx, image_file in enumerate(image_files):
         

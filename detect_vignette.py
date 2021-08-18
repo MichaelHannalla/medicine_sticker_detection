@@ -1,8 +1,8 @@
   
 # File: strip_detector_test.py
 # Author: @MichaelHannalla
-# Project: Trurapid COVID-19 Strips Detection Server with Python
-# Description: Python file for testing the strip detector based on detecto on a single input image
+# Project: Medicine Packages Sticker Detection
+# Description: Main Python file for the project functionality
 
 from detecto.core import Model
 from detecto.utils import read_image

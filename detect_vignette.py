@@ -1,5 +1,5 @@
   
-# File: strip_detector_test.py
+# File: detect_vignette.py
 # Author: @MichaelHannalla
 # Project: Medicine Packages Sticker Detection
 # Description: Main Python file for the project functionality
